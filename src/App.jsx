@@ -1,20 +1,16 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Manga from './pages/Manga'
 
 function App() {
   return (
-    <main className="landing">
-      <div className="landing__content">
-        <h1>KIZUTO.ART</h1>
-        <p className="landing__meta">Illustrator · Mangaka</p>
-        <p className="landing__statement">Stories drawn in black and white.</p>
-        <p className="landing__note">
-          Too broke to buy the .art domain, so for now, use kizuto.netlify.app.
-        </p>
-        <button type="button" className="landing__button">
-          READ MANGA
-        </button>
-      </div>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/manga" element={<Manga />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
