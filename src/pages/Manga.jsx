@@ -7,8 +7,8 @@ export default function Manga() {
   const navigate = useNavigate()
 
   return (
-    <main className="manga-page">
-      <header className="manga-page__header">
+    <main className="manga-page page-shell">
+      <header className="manga-page__header page-header">
         <h1>Manga</h1>
       </header>
       <div className="manga-gallery">
